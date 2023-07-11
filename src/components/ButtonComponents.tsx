@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {BsFillCreditCard2FrontFill} from 'react-icons/bs';
 
 const DefaultButton = ({ name, type, disabled, classname, clickhandler }: 
     {
@@ -80,4 +81,31 @@ export const HeaderButton = ({name, icon, selected, clickhandler}:
     </button>
   )
 }
+
+export const CreditButton = ({ name, type, disabled, classname, clickhandler }: 
+  {
+    name: string, 
+    type: any, 
+    disabled: boolean, 
+    classname: string, 
+    clickhandler: any
+  }
+) => {
+return (
+    <button
+      name={name}
+      type={type}
+      disabled={disabled}
+      className={`inline-flex w-fit items-center rounded-md bg-[#1676FE] ${classname}
+                text-center text-[20px] text-white 
+                hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-cyan-400 
+                disabled:bg-gray-500 `}
+      onClick = {clickhandler}
+    >   
+      <BsFillCreditCard2FrontFill className='mr-4'/> {`   `}
+      {name}
+    </button>
+);
+}
+
 export default DefaultButton;

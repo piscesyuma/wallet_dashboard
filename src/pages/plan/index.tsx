@@ -78,7 +78,7 @@ const LogIn:NextPage = () => {
                                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 " />
                         </div>
                     </div>
-                    <button
+                    {/* <button
                         type={"button"}
                         className={`inline-flex w-full items-center rounded-2xl bg-[#2D3648] h-[54px]
                                 text-center text-[18px] font-bold text-white 
@@ -87,6 +87,16 @@ const LogIn:NextPage = () => {
                         onClick={()=>{router.push("/auth/login")}}
                     >   
                         {"LOGIN"}
+                    </button> */}
+                    <button
+                        type={"button"}
+                        className={`inline-flex w-full items-center rounded-2xl bg-[#1676FE] h-[54px]
+                                text-center text-[18px] font-bold text-white 
+                                hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-400 
+                                disabled:bg-gray-500 justify-center`}
+                        onClick={()=>{router.push("/plan/pay")}}
+                    >   
+                        {"Next"}
                     </button>
                 </div>
                 
